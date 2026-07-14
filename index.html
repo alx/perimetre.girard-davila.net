@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QG074Q9P13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QG074Q9P13');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Périmètre — Pré-études ACC avec couche réseau</title>
-<meta name="description" content="Screening de projets solaires et de périmètres d'autoconsommation collective à partir de données ouvertes : demande, périmètre réglementaire, capacité réseau et coût de raccordement indicatif.">
+<meta name="description" content="Screening de projets solaires et de périmètres d'autoconsommation collective à partir de données ouvertes : demande, périmètre réglementaire et distance de raccordement.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -231,7 +240,7 @@
           <a class="btn btn-primary" href="#demo">Réserver une démo — 20 min</a>
           <a class="btn btn-ghost" href="#demo">Recevoir un exemple de pré-étude</a>
         </div>
-        <p class="hero-note">100&nbsp;% données ouvertes · Enedis · Caparéseau · IGN BD&nbsp;TOPO · PVGIS · <b>déployable on&#8209;premise</b></p>
+        <p class="hero-note">100&nbsp;% données ouvertes · Enedis · IGN BD&nbsp;TOPO · PVGIS · Caparéseau (à venir) · <b>déployable on&#8209;premise</b></p>
       </div>
 
       <!-- Signature : schéma de screening animé -->
@@ -287,7 +296,7 @@
           </g>
         </svg>
         <figcaption class="map-caption">
-          <span>SCREEN #017 · DÉPT 31 · SOURCES : ENEDIS / CAPARÉSEAU / BD TOPO</span>
+          <span>SCREEN #017 · DÉPT 31 · SOURCES : ENEDIS / BD TOPO · CAPARÉSEAU (À VENIR)</span>
           <span class="flag-ok">CONFIANCE B — PRÉ-ÉTUDE, PAS UN DEVIS</span>
         </figcaption>
       </figure>
@@ -314,30 +323,30 @@
         <div class="step">
           <span class="tag">01 · Données</span>
           <h3>Fusion des sources ouvertes</h3>
-          <p>Bâtiments, voirie, postes, consommation par maille, capacité d'accueil et gisement solaire, assemblés dans un socle géographique unique.</p>
+          <p>Bâtiments, voirie, postes, consommation par maille et gisement solaire, assemblés dans un socle géographique unique.</p>
           <ul>
             <li>Enedis Open Data — postes, conso, registre</li>
-            <li>Caparéseau — capacité postes sources</li>
             <li>IGN BD TOPO — bâti, voirie</li>
             <li>PVGIS — production horaire</li>
+            <li>Caparéseau — capacité postes sources (à venir)</li>
           </ul>
         </div>
         <div class="step">
           <span class="tag">02 · Screening</span>
           <h3>Périmètre + réseau, ensemble</h3>
-          <p>Placez un site de production. Périmètre trace le rayon réglementaire, recense la demande couverte, calcule la distance au poste par la voirie et confronte l'injection à la capacité disponible. Flag vert, orange ou rouge.</p>
+          <p>Placez un site de production. Périmètre trace le rayon réglementaire, recense la demande couverte et calcule la distance de raccordement par la voirie. La confrontation à la capacité d'accueil (Caparéseau) et le flag injection arrivent avec la phase pilote.</p>
         </div>
         <div class="step">
           <span class="tag">03 · Pré-étude</span>
           <h3>Export en marque blanche</h3>
-          <p>Carte, tableau des consommateurs estimés, simulation de partage au pas 30&nbsp;min, coût de raccordement indicatif et page d'hypothèses. PDF prêt à envoyer à votre client — sous votre marque.</p>
+          <p>Carte, tableau des consommateurs estimés, simulation de partage au pas horaire et page d'hypothèses. Export pré-étude en construction — les pilotes en définissent le format.</p>
         </div>
       </div>
 
       <div class="tiers">
         <div class="tier tier-a">
           <span class="lvl">CONFIANCE A</span>
-          <p>Donnée publiée telle quelle : position des postes, capacité Caparéseau, registre de production.</p>
+          <p>Donnée publiée telle quelle : position des postes, registre de production. Capacité Caparéseau à venir.</p>
         </div>
         <div class="tier tier-b">
           <span class="lvl">CONFIANCE B</span>
@@ -345,7 +354,7 @@
         </div>
         <div class="tier tier-c">
           <span class="lvl">CONFIANCE C</span>
-          <p>Heuristique assumée : profils de charge synthétiques, coût de raccordement indicatif. Toujours signalée comme telle.</p>
+          <p>Heuristique assumée : profils de charge synthétiques. Toujours signalée comme telle.</p>
         </div>
       </div>
     </div>
@@ -395,11 +404,11 @@
     <div class="wrap demo-grid">
       <div class="demo-left">
         <span class="eyebrow">Démo</span>
-        <h2>20 minutes, sur un cas réel de votre territoire.</h2>
-        <p>Pas de slides. Vous donnez une commune ou un site, on le passe au screening en direct. Phase pilote en cours : 5 accès gratuits contre retours d'usage.</p>
+        <h2>20 minutes, en direct sur nos zones de validation (Toulouse centre, Saint-Geniès-Bellevue), puis sur votre territoire pendant le pilote.</h2>
+        <p>Pas de slides. On passe une zone de validation au screening en direct. Phase pilote en cours : 5 accès gratuits contre retours d'usage — votre département sert à prioriser le déploiement.</p>
         <ul class="demo-list">
-          <li>Screening en direct sur votre département</li>
-          <li>Exemple de pré-étude PDF en marque blanche</li>
+          <li>Screening en direct sur une zone de validation</li>
+          <li>Aperçu de l'export pré-étude en construction</li>
           <li>Accès anticipé à la carte nationale du potentiel ACC</li>
         </ul>
       </div>
@@ -464,7 +473,7 @@
 <footer>
   <div class="wrap foot">
     <span>Périmètre / un outil <a href="https://girard-davila.net">Girard-Davila.net</a></span>
-    <span class="mono" style="font-size:11.5px">DONNÉES : ENEDIS · CAPARÉSEAU · IGN · PVGIS — LICENCES OUVERTES</span>
+    <span class="mono" style="font-size:11.5px">DONNÉES : ENEDIS · IGN · PVGIS — LICENCES OUVERTES · CAPARÉSEAU (À VENIR)</span>
     <span><a href="#demo">Contact</a> · Déploiement on-premise disponible</span>
   </div>
 </footer>
